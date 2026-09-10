@@ -152,3 +152,53 @@
   opacity: 1;
   transform: translate(calc(-50%), calc(-50% - 400px)) scale(1) rotate(0deg);
 }
+
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    margin-top: 1rem;
+  }
+
+  .hello-badge {
+    font-size: 1rem;
+    padding: 0.3rem 1.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-image-container {
+    margin-top: 2rem;
+    height: 55vh;
+    min-height: 400px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .concentric-rings {
+    width: 150%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .tool-icon, .doodles-img {
+    display: none !important;
+  }
+}
