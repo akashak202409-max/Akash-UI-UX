@@ -151,14 +151,42 @@
   padding: 2.5rem;
 }
 
-.dark-card {
+/* Lightning Border Effect */
+.lightning-wrapper {
+  position: relative;
+  padding: 2px; /* Border thickness */
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  color: #e0e0e0;
   clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+  overflow: hidden;
+}
+
+.lightning-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 70%, var(--primary-color, #0885FE) 100%);
+  animation: lightning-spin 3s linear infinite;
+  z-index: 0;
+}
+
+@keyframes lightning-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dark-card {
+  position: relative;
+  z-index: 1;
+  background: #0e0e11; /* Matching the main dark background */
+  clip-path: polygon(0 0, calc(100% - 39px) 0, 100% 39px, 100% 100%, 39px 100%, 0 calc(100% - 39px));
+  color: #e0e0e0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  border: none;
 }
 
 .dark-card .info-block h3 {

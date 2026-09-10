@@ -77,11 +77,13 @@ const Contact = () => {
           {/* Info Cards Side */}
           <div className="contact-info-side">
             
-            <div className="info-card dark-card">
-              <div className="info-block">
-                <h3>Contact</h3>
-                <p>Phone : +91 8870392530</p>
-                <p>Email : akashakash87223@gmail.com</p>
+            <div className="lightning-wrapper">
+              <div className="info-card dark-card">
+                <div className="info-block">
+                  <h3>Contact</h3>
+                  <p>Phone : +91 8870392530</p>
+                  <p>Email : akashakash87223@gmail.com</p>
+                </div>
               </div>
             </div>
 
