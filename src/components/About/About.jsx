@@ -110,7 +110,7 @@ const About = () => {
             </div>
 
             <div className="about-actions">
-              <button className="download-btn">
+              <a href="/Akash_UI_UX_Designer_V5.pdf" download="Akash_CV.pdf" className="download-btn" style={{ textDecoration: 'none' }}>
                 <span>Download CV</span>
                 <div className="btn-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -118,7 +118,7 @@ const About = () => {
                     <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </div>
-              </button>
+              </a>
               <div className="signature">Akash</div>
             </div>
           </div>

@@ -185,15 +185,6 @@ const Projects = () => {
               
               <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
-                <div className="project-overlay">
-                  <button className="view-project-btn">
-                    View Case Study
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
-                </div>
                 <span className="project-category-badge">{project.category}</span>
               </div>
 
