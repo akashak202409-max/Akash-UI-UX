@@ -1,0 +1,99 @@
+.skills-section {
+  width: 100vw;
+  background-color: #0e0e11;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; /* Hide horizontal overflow for marquee */
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  /* Optional: Fade edges to black for a seamless loop appearance */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  padding-left: 2rem;
+  width: max-content;
+}
+
+/* Glassmorphism Effect */
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(8, 133, 254, 0.4);
+  transform: translateY(-3px);
+  color: #0885FE;
+}
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #0885FE;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(8, 133, 254, 0.8);
+}
+
+/* Animations */
+.track-left {
+  animation: scrollLeft 35s linear infinite;
+}
+
+.track-right {
+  /* To move right seamlessly, start translated and move to 0 */
+  animation: scrollRight 40s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-33.33% - 1rem)); } /* Moves exactly 1/3 of the duplicated track width */
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(calc(-33.33% - 1rem)); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .skill-pill {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

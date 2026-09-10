@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #0885FE; /* Blue */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #FFC107; /* Yellow */
+  --bg-color-1: #ff9a9e;
+  --bg-color-2: #a18cd1;
+  --bg-color-3: #fbc2eb;
+  --bg-color-4: #8fd3f4;
+  --text-dark: #121212;
+  --nav-bg: #1a1a1a;
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: #fdfdfd;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Animated Blur Blobs Background */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #ffffff; /* Base white color */
+  overflow: hidden;
+}
+
+.blur-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.9;
+  animation: floatBlobs 8s infinite alternate ease-in-out;
+}
+
+.blur-blob-1 {
+  width: 60vw;
+  height: 60vw;
+  background-color: #FFF59D; /* Soft Yellow */
+  top: -10%;
+  left: -20%;
+  animation-delay: 0s;
+}
+
+.blur-blob-2 {
+  width: 70vw;
+  height: 70vw;
+  background-color: #FFC107; /* Bright Yellow */
+  top: -30%;
+  right: -20%;
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+.blur-blob-3 {
+  width: 65vw;
+  height: 65vw;
+  background-color: #ffffff; /* White */
+  bottom: -30%;
+  left: 0%;
+  animation-duration: 9s;
+  animation-delay: -5s;
+}
+
+@keyframes floatBlobs {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(30vw, 30vh) scale(1.3) rotate(45deg);
+  }
+  66% {
+    transform: translate(-30vw, 20vh) scale(0.8) rotate(-45deg);
+  }
+  100% {
+    transform: translate(25vw, -30vh) scale(1.2) rotate(90deg);
+  }
+}
