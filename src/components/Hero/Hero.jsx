@@ -8,7 +8,7 @@ import antigravityLogo from '../../assets/antigravity logo.png';
 import chatgptLogo from '../../assets/chatgpt_logo2.png';
 const Hero = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section" id="home">
 
       
       <div className="hero-content">
