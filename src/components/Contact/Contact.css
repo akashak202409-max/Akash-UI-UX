@@ -18,23 +18,29 @@
   gap: 4rem;
 }
 
-/* Header Tweaks (relies mostly on global .section-header classes) */
-.contact-header {
+/* Header Tweaks */
+.contact-header-left {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-.contact-tag {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 0.5rem;
+.contact-tag-simple {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
   color: var(--accent-color, #FFC107);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
-.contact-title {
-  margin-top: 0.5rem;
+.contact-title-main {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: #ffffff;
 }
 
 .highlight-blue {
@@ -220,9 +226,5 @@
   .form-row {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-  .contact-header {
-    align-items: center;
-    text-align: center;
   }
 }

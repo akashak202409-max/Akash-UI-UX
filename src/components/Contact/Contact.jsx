@@ -7,14 +7,9 @@ const Contact = () => {
       <div className="contact-container">
         
         {/* Header */}
-        <div className="section-header contact-header">
-          <div className="circles-icon">
-            <span className="circle circle-white"></span>
-            <span className="circle circle-yellow"></span>
-            <span className="circle circle-blue"></span>
-          </div>
-          <div className="contact-tag">Contact Me</div>
-          <h2 className="projects-title contact-title">
+        <div className="contact-header-left">
+          <p className="contact-tag-simple">CONTACT ME</p>
+          <h2 className="contact-title-main">
             <span className="highlight-blue">Let’s Talk for Your</span> <br/>
             Next Projects ✨
           </h2>
