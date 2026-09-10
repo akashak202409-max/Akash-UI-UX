@@ -204,3 +204,9 @@
     transform: translateY(-5px); /* Remove X translation on mobile */
   }
 }
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 3rem 1.5rem;
+  }
+}

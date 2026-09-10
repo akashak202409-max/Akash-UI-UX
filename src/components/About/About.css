@@ -407,12 +407,38 @@
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
+  
+  .about-content-side {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-description {
+    text-align: center;
+  }
+  
+  .about-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
   .about-stats {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    width: 100%;
+    text-align: center;
   }
+  
   .stat-divider {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem;
   }
 }

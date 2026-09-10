@@ -221,3 +221,9 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1.5rem;
+  }
+}
