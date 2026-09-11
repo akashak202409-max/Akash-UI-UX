@@ -1,5 +1,5 @@
 import './Hero.css';
-import profilePic from '../../assets/profile_pic.png';
+import profilePic from '../../assets/profile_pic_home.png';
 import doodles from '../../assets/doodles.png';
 import figmaLogo from '../../assets/figma logo.webp';
 import canvaLogo from '../../assets/canva logo.webp';
