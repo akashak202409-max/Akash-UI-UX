@@ -1,0 +1,13 @@
+--- src/components/Projects/Projects.css
++++ src/components/Projects/Projects.css
+@@ -211,8 +211,8 @@
+ @media (max-width: 768px) {
+   .projects-section {
+     padding: 3rem 1.25rem;
+   }
+ 
+   .projects-grid {
+-    grid-template-columns: 1fr;
++    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 1.5rem;
+   }
