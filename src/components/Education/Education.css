@@ -211,3 +211,47 @@
     padding: 3rem 1.5rem;
   }
 }
+
+/* Bento Card Hover Overlay */
+.bento-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(8, 133, 254, 0.85); /* Primary blue with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.4s ease;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.bento-card:hover .bento-overlay {
+  opacity: 1;
+}
+
+.view-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #121212;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.bento-card:hover .view-cert-btn {
+  transform: translateY(0);
+}
+
+.view-cert-btn:hover {
+  background: var(--accent-color, #FFC107);
+  transform: translateY(-3px) scale(1.05) !important;
+}
