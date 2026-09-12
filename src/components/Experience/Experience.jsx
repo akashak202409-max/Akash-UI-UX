@@ -37,7 +37,8 @@ const Experience = () => {
       company: "Zhians Private Limited",
       type: "Internship",
       date: "July 2025 - Oct 2025",
-      description: "Designed the complete doctor-side interface for a pregnancy & fertility app. Created user flows, wireframes, and high-fidelity screens in Figma. Collaborated with product and development teams to ensure design accuracy. Contributed to marketing visuals including posters and presentation materials."
+      description: "Designed the complete doctor-side interface for a pregnancy & fertility app. Created user flows, wireframes, and high-fidelity screens in Figma. Collaborated with product and development teams to ensure design accuracy. Contributed to marketing visuals including posters and presentation materials.",
+      certificate: "/Zhians.pdf"
     },
     {
       id: 1,
