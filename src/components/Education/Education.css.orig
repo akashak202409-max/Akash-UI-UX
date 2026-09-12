@@ -98,7 +98,6 @@
   justify-content: center;
   color: #0885FE;
   box-shadow: 0 0 20px rgba(8, 133, 254, 0.4);
-  box-sizing: border-box;
   transition: all 0.4s ease;
 }
 
