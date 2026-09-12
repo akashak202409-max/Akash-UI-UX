@@ -88,10 +88,12 @@
 
 .id-card {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   background: #1a1a1a;
   border-radius: 18px;
   padding: 14px;
+  box-sizing: border-box;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
   z-index: 1;
   overflow: hidden;
@@ -439,6 +441,29 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.25rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .about-stats {
+    gap: 1.25rem;
+  }
+  
+  .about-badge {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .about-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .id-card-wrapper {
+    transform: scale(0.95);
+    transform-origin: top center;
   }
 }

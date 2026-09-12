@@ -161,45 +161,51 @@
 /* Mobile Responsiveness for Hero */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 100px;
+    height: 100vh;
+    min-height: 0;
+    padding-top: 80px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .hero-content {
-    margin-top: 1rem;
+    margin-top: 1vh;
   }
 
   .hello-badge {
-    font-size: 1rem;
-    padding: 0.3rem 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    padding: 0.25rem 1.5rem;
+    margin-bottom: 1rem;
     border-radius: 20px;
   }
 
   .hero-title {
-    font-size: 3.5rem;
-    line-height: 1.1;
+    font-size: 3rem;
+    line-height: 1.15;
   }
 
   .hero-image-container {
-    margin-top: 2rem;
-    height: 55vh;
-    min-height: 400px;
+    margin-top: auto;
+    height: auto;
+    min-height: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
     width: 100%;
     overflow: hidden;
   }
 
   .profile-img {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: top center;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
   }
 
   .concentric-rings {
-    width: 150%;
-    top: 60%;
+    width: 180%;
+    top: 55%;
     transform: translate(-50%, -50%);
   }
 

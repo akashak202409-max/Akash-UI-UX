@@ -1,0 +1,34 @@
+--- src/components/About/About.css
++++ src/components/About/About.css
+@@ -89,7 +89,8 @@
+ 
+ .id-card {
+   position: relative;
+-  width: 320px;
++  width: 100%;
++  max-width: 320px;
+   background: #1a1a1a;
+   border-radius: 18px;
+   padding: 14px;
+@@ -428,5 +429,9 @@
+ @media (max-width: 768px) {
+   .about-section {
+     padding: 3rem 1.5rem;
+   }
++  .stat-number {
++    font-size: 2rem;
++  }
++  .about-stats {
++    gap: 1rem;
++  }
++  .about-badge {
++    padding: 0.4rem 1.2rem;
++    font-size: 0.85rem;
++  }
++  .about-description p {
++    font-size: 0.95rem;
++  }
++  .id-card-wrapper {
++    transform: scale(0.9);
++  }
+ }
