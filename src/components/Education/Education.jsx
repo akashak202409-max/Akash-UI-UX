@@ -53,7 +53,7 @@ const Education = () => {
         <div className="bento-grid" ref={gridRef} onMouseMove={handleMouseMove}>
           
           {/* Card 1: Main Degree (Spans 2 columns) */}
-          <div className="bento-card card-large">
+          <div className="bento-card ">
             <div className="bento-card-content">
               <div className="bento-header">
                 <span className="bento-date">2022 - 2025</span>
@@ -73,7 +73,7 @@ const Education = () => {
           </div>
 
           {/* Card 2: Master's Degree (Spans 2 columns) */}
-          <div className="bento-card card-large">
+          <div className="bento-card ">
             <div className="bento-card-content">
               <div className="bento-header">
                 <span className="bento-date">2025 – 2027</span>
@@ -93,7 +93,7 @@ const Education = () => {
           </div>
 
           {/* Card 3: UI/UX Designer */}
-          <div className="bento-card card-small">
+          <div className="bento-card ">
             <div className="bento-overlay">
               <a href="/UI_UX_DE.pdf" target="_blank" rel="noopener noreferrer" className="view-cert-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}>
@@ -126,7 +126,7 @@ const Education = () => {
           </div>
 
           {/* Card 4: Figma Advanced */}
-          <div className="bento-card card-small">
+          <div className="bento-card ">
             <div className="bento-overlay">
               <a href="/Figma_Certificate.pdf" target="_blank" rel="noopener noreferrer" className="view-cert-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}>

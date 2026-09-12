@@ -1,6 +1,6 @@
 .education-section {
   width: 100vw;
-  background-color: #0e0e11;
+  background-color: transparent;
   color: #ffffff;
   padding: 8rem 2rem;
   display: flex;
@@ -35,15 +35,17 @@
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   width: 100%;
   position: relative;
 }
 
 /* Interactive Bento Card */
 .bento-card {
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(30, 30, 35, 0.7), rgba(15, 15, 18, 0.9));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 24px;
   padding: 2.5rem;
   position: relative;
@@ -52,7 +54,8 @@
   justify-content: space-between;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-height: 280px;
   
   /* Initial state for entrance animation */
   opacity: 0;
@@ -69,6 +72,7 @@
 .bento-card:nth-child(1) { transition-delay: 0.1s; }
 .bento-card:nth-child(2) { transition-delay: 0.25s; }
 .bento-card:nth-child(3) { transition-delay: 0.4s; }
+.bento-card:nth-child(4) { transition-delay: 0.55s; }
 
 /* Spotlight Glow Effect using CSS Variables */
 .bento-card::before {
@@ -92,9 +96,8 @@
 }
 
 .bento-card:hover {
-  border-color: rgba(8, 133, 254, 0.3);
-  transform: translateY(-5px) scale(1.02);
-  /* Reset delay on hover to avoid lagging transition */
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(8, 133, 254, 0.5), 0 0 30px rgba(8, 133, 254, 0.2);
   transition-delay: 0s;
 }
 
@@ -105,17 +108,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-/* Specific Card Sizes */
-.card-large {
-  grid-column: span 2;
-  min-height: 280px;
-}
-
-.card-small {
-  grid-column: span 1;
-  min-height: 240px;
 }
 
 /* Header & Icons */
@@ -133,24 +125,39 @@
   background: rgba(8, 133, 254, 0.1);
   padding: 0.4rem 1rem;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover .bento-date {
+  background: #0885FE;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(8, 133, 254, 0.5);
 }
 
 .bento-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 16px;
-  background: rgba(255,255,255,0.05);
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
   color: #fff;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: floatIcon 4s ease-in-out infinite;
 }
 
 .bento-card:hover .bento-icon {
-  background: #0885FE;
-  color: #121212;
-  transform: rotate(-10deg) scale(1.1);
+  background: linear-gradient(135deg, #0885FE, #00c6ff);
+  color: #fff;
+  transform: rotate(-10deg) scale(1.15);
+  box-shadow: 0 10px 20px rgba(8, 133, 254, 0.4);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 /* Typography */
@@ -162,15 +169,16 @@
 }
 
 .bento-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
-.card-small .bento-title {
-  font-size: 1.4rem;
+.bento-card:hover .bento-title {
+  color: #0885FE;
 }
 
 .bento-subtitle {
@@ -184,31 +192,21 @@
   color: #888;
   line-height: 1.6;
   margin: 0.5rem 0 0 0;
-  max-width: 80%;
 }
 
 /* Responsive Grid */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .bento-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .card-large, .card-small {
-    grid-column: span 1;
-  }
-  
-  .bento-card {
-    padding: 2rem;
-  }
-  
-  .bento-desc {
-    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .education-section {
     padding: 3rem 1.5rem;
+  }
+  .bento-card {
+    padding: 2rem;
   }
 }
 
