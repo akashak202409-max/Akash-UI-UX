@@ -72,7 +72,27 @@ const Education = () => {
             </div>
           </div>
 
-          {/* Card 2: UI/UX Designer */}
+          {/* Card 2: Master's Degree (Spans 2 columns) */}
+          <div className="bento-card card-large">
+            <div className="bento-card-content">
+              <div className="bento-header">
+                <span className="bento-date">2025 – 2027</span>
+                <div className="bento-icon degree-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+              </div>
+              <div className="bento-text">
+                <h3 className="bento-title">M.C.A – SRM Online</h3>
+                <p className="bento-subtitle">SRM Institute of Science and Technology</p>
+                <p className="bento-desc">Pursuing Master of Computer Applications through SRM Online, with a focus on advanced computer applications, software development, programming, and emerging technologies.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: UI/UX Designer */}
           <div className="bento-card card-small">
             <div className="bento-overlay">
               <a href="/UI_UX_DE.pdf" target="_blank" rel="noopener noreferrer" className="view-cert-btn">
@@ -105,7 +125,7 @@ const Education = () => {
             </div>
           </div>
 
-          {/* Card 3: Figma Advanced */}
+          {/* Card 4: Figma Advanced */}
           <div className="bento-card card-small">
             <div className="bento-card-content">
               <div className="bento-header">
